@@ -19,9 +19,9 @@ button:focus {
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 775px;
+  height: 100vh;
   overflow: hidden;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -80,7 +80,18 @@ button:focus {
 
 /* Desktop */
 @media (min-width: 768px) {
+  .chat-send-form {
+    max-width: calc(90% - 290px);
+    margin-top: 10px;
+  }
 
+  .return-message {
+    max-width: calc(90% - 190px);
+  }
+}
+
+/* Tablets */
+@media (min-width: 500px) {
   .skull-head-close {
     width: 500px;
     height: 500px;
@@ -89,14 +100,5 @@ button:focus {
   .skull-head-open {
     width: 500px;
     height: 500px;
-  }
-
-  .chat-send-form {
-    max-width: calc(90% - 290px);
-    margin-top: 10px;
-  }
-
-  .return-message {
-    max-width: calc(90% - 290px);
-  }
+  } 
 }
