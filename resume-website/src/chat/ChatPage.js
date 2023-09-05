@@ -42,24 +42,24 @@ const ChatPage = () => {
       }
 
     return(
-        <div className="chat-page">
-            <div className="chat-interface">
-                <div className="chat-send-form">
-                    <input className="chat-input"
-                        type="text"
-                        value={input}
-                        placeholder="Ask away..."
-                        onChange={e => setInput(e.target.value)}
-                        onKeyPress={e => e.key === 'Enter' ? handleSend() : null}
-                    />
-                    <span className="send-button "></span>
-                </div>
+          <div className="chat-interface">
+              <div className="img-container">
                 <div className={`skull-head-${talking === false ? "close" : "open"}`}></div>
-                <div className="return-message">
-                    {returnMessage}
-                </div>
-            </div>
-        </div>
+              </div>
+              <div className="return-message">
+                  {returnMessage}
+              </div>
+              <div className="chat-send-form">
+                  <input className="chat-input"
+                      type="text"
+                      value={input}
+                      placeholder="Ask away..."
+                      onChange={e => setInput(e.target.value)}
+                      onKeyPress={e => e.key === 'Enter' ? handleSend() : null}
+                  />
+                  <span className="send-button "></span>
+              </div>
+          </div>
     )
 }
 export default ChatPage;

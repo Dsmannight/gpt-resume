@@ -5,9 +5,6 @@
 
 .chat-page {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
   transform: translate(-50%, 0);
 }
 
@@ -20,55 +17,47 @@ button:focus {
 
 .chat-interface {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 775px;
+  overflow: hidden;
+  justify-content: end;
+  align-items: center;
 }
 
 .chat-send-form {
   z-index: 1;
-  position: absolute;
-  bottom: 0px;
   height: 80px;
-  left: 50%;
-  top: 700px;
-  transform: translate(-50%, 0%);
   width: 90%;
   max-width: 90%;
 }
 
 .return-message {
   font-family: 'Courier Prime', monospace;
-  position: absolute;
-  top: 520px;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  margin-bottom: 10px;
   width: 100%;
   height: 200px;
   color: white;
 }
 
 .skull-head-close {
-  height: 500px;
-  width: 500px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  top: 0;
+  height: 100vw;
+  width: 100vw;
   background-image: url("../../public/imgs/skull_closed.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  overflow: hidden;
 }
 
 .skull-head-open {
-  height: 500px;
-  width: 500px;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  top: 0;
+  height: 100vw;
+  width: 100vw;
   background-image: url("../../public/imgs/skull_open.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
-  overflow-x: hidden;
 }
 
 .chat-input {
@@ -91,6 +80,16 @@ button:focus {
 
 /* Desktop */
 @media (min-width: 768px) {
+
+  .skull-head-close {
+    width: 500px;
+    height: 500px;
+  }
+
+  .skull-head-open {
+    width: 500px;
+    height: 500px;
+  }
 
   .chat-send-form {
     max-width: calc(90% - 290px);
